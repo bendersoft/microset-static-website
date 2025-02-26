@@ -36,19 +36,8 @@ pnpm preview
 ```
 
 ## Linter & Formatage avec Biome
-### Vérifier le code
 ```sh
-pnpm biome check .
-```
-
-### Formatter le code
-```sh
-pnpm biome format .
-```
-
-### Lancer le linter avec correction automatique
-```sh
-pnpm biome fix .
+npx @biomejs/biome check --write ./src
 ```
 
 ## Fonctionnalités principales
