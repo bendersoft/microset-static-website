@@ -1,16 +1,15 @@
 @import "tailwindcss";
 
-
 @layer components {
-  .main-container {
-    @apply flex flex-col w-full gap-2 p-4 border-2 border-lime-500 rounded-md;
-  }
+	.main-container {
+		@apply flex flex-col w-full gap-2 p-4 border-2 border-lime-500 rounded-md;
+	}
 
-  .main-title {
-    @apply text-gray-100 text-lg font-semibold;
-  }
+	.main-title {
+		@apply text-gray-100 text-lg font-semibold;
+	}
 
-  .normal-text {
-    @apply text-gray-100;
-  }
+	.normal-text {
+		@apply text-gray-100;
+	}
 }
