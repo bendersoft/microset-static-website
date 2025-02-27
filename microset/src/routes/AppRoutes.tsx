@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Automatisme from "../pages/Automatisme";
 import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import Industries from "../pages/Industries";
@@ -16,6 +17,7 @@ const AppRoutes = () => {
 				<Route path="/partenaires" element={<Partenaires />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/mentions" element={<Mentions />} />
+				<Route path="/automatisme" element={<Automatisme />} />
 			</Routes>
 		</main>
 	);
