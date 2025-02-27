@@ -9,9 +9,9 @@ const rootElement = document.getElementById("root");
 if (rootElement) {
 	createRoot(rootElement).render(
 		<StrictMode>
-			    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
 		</StrictMode>,
 	);
 } else {
