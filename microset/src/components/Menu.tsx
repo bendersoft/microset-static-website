@@ -17,11 +17,11 @@ function Menu() {
 	};
 
 	return (
-		<header className="border-b-2 border-b-cyan-200 bg-zinc-950 relative text-gray-100">
-			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+		<header className="border-b-1 border-b-cyan-200 bg-zinc-950 relative text-gray-100 font-bold">
+			<div className="max-w-6xl container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between py-4">
 					<div className="py-2">
-						<Link to="/" onClick={closeMenus} className="hover:text-cyan-400">
+						<Link to="/" onClick={closeMenus} className="hover:text-cyan-200">
 							<h1 className="text-xl font-bold">Microset</h1>
 							<p className="text-sm text-gray-400">
 								Surveillances et pilotages industriels
@@ -36,9 +36,9 @@ function Menu() {
 						className="lg:hidden relative"
 					>
 						{mobileMenuOpen ? (
-							<XIcon className="h-6 w-6 text-white hover:text-cyan-400 transition-colors" />
+							<XIcon className="h-6 w-6 text-white hover:text-cyan-200 transition-colors" />
 						) : (
-							<MenuIcon className="h-6 w-6 text-white hover:text-cyan-400 transition-colors" />
+							<MenuIcon className="h-6 w-6 text-white hover:text-cyan-200 transition-colors" />
 						)}
 					</button>
 
@@ -49,15 +49,15 @@ function Menu() {
 							<button
 								type="button"
 								onClick={() => toggleDropdown("industries")}
-								className="hover:text-cyan-400"
+								className="hover:text-cyan-200"
 								aria-expanded={openDropdown === "industries"}
 								aria-haspopup="true"
 							>
 								Industries <span className="text-sm">▼</span>
 							</button>
 							{openDropdown === "industries" && (
-								<div className="absolute left-0 mt-2 w-60 bg-gray-700 shadow-lg rounded-lg py-2">
-									<div className="space-y-2  mx-3 border-l-2 border-cyan-400">
+								<div className="absolute left-0 mt-2 w-64 bg-gray-700 shadow-lg rounded-lg py-2">
+									<div className="space-y-2  mx-3 border-l-2 border-cyan-200">
 										<Link
 											to="/industries/automatisme"
 											onClick={closeMenus}
@@ -112,15 +112,15 @@ function Menu() {
 							<button
 								type="button"
 								onClick={() => toggleDropdown("vinicole")}
-								className="hover:text-cyan-400"
+								className="hover:text-cyan-200"
 								aria-expanded={openDropdown === "vinicole"}
 								aria-haspopup="true"
 							>
 								Vinicole <span className="text-sm">▼</span>
 							</button>
 							{openDropdown === "vinicole" && (
-								<div className="absolute left-0 mt-2 w-60 bg-gray-700 shadow-lg rounded-lg py-2">
-									<div className="space-y-2 mx-3 border-l-2 border-cyan-400">
+								<div className="absolute left-0 mt-2 w-64 bg-gray-700 shadow-lg rounded-lg py-2">
+									<div className="space-y-2 mx-3 border-l-2 border-cyan-200">
 										<Link
 											to="/vinicole/automatisme"
 											onClick={closeMenus}
@@ -176,7 +176,7 @@ function Menu() {
 						<Link
 							to="/partenaires"
 							onClick={closeMenus}
-							className="hover:text-cyan-400"
+							className="hover:text-cyan-200"
 							aria-label="Page partenaires"
 						>
 							Partenaires
@@ -184,7 +184,7 @@ function Menu() {
 						<Link
 							to="/contact"
 							onClick={closeMenus}
-							className="hover:text-cyan-400"
+							className="hover:text-cyan-200"
 							aria-label="Page contact"
 						>
 							Contact
@@ -201,38 +201,38 @@ function Menu() {
 									onClick={() => {
 										toggleDropdown("industries");
 									}}
-									className="w-full py-2 text-left hover:text-cyan-400"
+									className="w-full py-2 text-left hover:text-cyan-200"
 								>
 									Industries ▼
 								</button>
 
 								{openDropdown === "industries" && (
-									<div className="space-y-2 pl-4 border-l-2 border-cyan-400 ml-2">
+									<div className="space-y-2 pl-4 border-l-2 border-cyan-200 ml-2">
 										<Link
 											to="/industries/automatisme"
 											onClick={closeMenus}
-											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-200"
 										>
 											Automatisation
 										</Link>
 										<Link
 											to="/industries/informatique"
 											onClick={closeMenus}
-											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-200"
 										>
 											Électronique
 										</Link>
 										<Link
 											to="/industries/machines"
 											onClick={closeMenus}
-											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-200"
 										>
 											Machines spéciales
 										</Link>
 										<Link
 											to="/industries/autoclaves"
 											onClick={closeMenus}
-											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-200"
 										>
 											Autoclaves
 										</Link>
@@ -245,38 +245,38 @@ function Menu() {
 									onClick={() => {
 										toggleDropdown("vinicole");
 									}}
-									className="w-full py-2 text-left hover:text-cyan-400"
+									className="w-full py-2 text-left hover:text-cyan-200"
 								>
 									Vinicole ▼
 								</button>
 
 								{openDropdown === "vinicole" && (
-									<div className="space-y-2 pl-4 border-l-2 border-cyan-400 ml-2">
+									<div className="space-y-2 pl-4 border-l-2 border-cyan-200 ml-2">
 										<Link
 											to="/vinicole/automatisme"
 											onClick={closeMenus}
-											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-200"
 										>
 											Automatisme
 										</Link>
 										<Link
 											to="/vinicole/informatique"
 											onClick={closeMenus}
-											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-200"
 										>
 											Informatique
 										</Link>
 										<Link
 											to="/vinicole/electronique"
 											onClick={closeMenus}
-											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-200"
 										>
 											Electronique
 										</Link>
 										<Link
 											to="/vinicole/appareils"
 											onClick={closeMenus}
-											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-200"
 										>
 											Appareils
 										</Link>
@@ -287,14 +287,14 @@ function Menu() {
 								<Link
 									to="/partenaires"
 									onClick={closeMenus}
-									className="block py-2 hover:text-cyan-400"
+									className="block py-2 hover:text-cyan-200"
 								>
 									Partenaires
 								</Link>
 								<Link
 									to="/contact"
 									onClick={closeMenus}
-									className="block py-2 hover:text-cyan-400"
+									className="block py-2 hover:text-cyan-200"
 								>
 									Contact
 								</Link>
