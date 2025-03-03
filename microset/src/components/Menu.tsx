@@ -59,7 +59,7 @@ function Menu() {
 								<div className="absolute left-0 mt-2 w-60 bg-gray-700 shadow-lg rounded-lg py-2">
 									<div className="space-y-2  mx-3 border-l-2 border-cyan-400">
 										<Link
-											to="/automatisme"
+											to="/industries/automatisme"
 											onClick={closeMenus}
 											className="block px-4 py-2 hover:bg-gray-600"
 											aria-label="Automatisation - Solutions d'automatisation industrielle"
@@ -70,23 +70,34 @@ function Menu() {
 											</span>
 										</Link>
 										<Link
-											to="/industries"
+											to="/industries/informatique"
 											onClick={closeMenus}
 											className="block px-4 py-2 hover:bg-gray-600"
-											aria-label="Électronique - Solutions électroniques industrielles"
+											aria-label="Électronique"
 										>
-											<span className="block font-medium">Électronique</span>
+											<span className="block font-medium">Informatique</span>
 											<span className="block text-sm text-gray-400">
 												Solutions électroniques industrielles
 											</span>
 										</Link>
 										<Link
-											to="/industries"
+											to="/industries/machines"
 											onClick={closeMenus}
 											className="block px-4 py-2 hover:bg-gray-600"
-											aria-label="Logiciels - Solutions logicielles industrielles"
+											aria-label="Logiciels"
 										>
-											<span className="block font-medium">Logiciels</span>
+											<span className="block font-medium">Machines spéciales</span>
+											<span className="block text-sm text-gray-400">
+												Solutions logicielles industrielles
+											</span>
+										</Link>
+										<Link
+											to="/industries/autoclaves"
+											onClick={closeMenus}
+											className="block px-4 py-2 hover:bg-gray-600"
+											aria-label="Autoclaves"
+										>
+											<span className="block font-medium">Autoclaves</span>
 											<span className="block text-sm text-gray-400">
 												Solutions logicielles industrielles
 											</span>
@@ -111,38 +122,49 @@ function Menu() {
 								<div className="absolute left-0 mt-2 w-60 bg-gray-700 shadow-lg rounded-lg py-2">
 									<div className="space-y-2 mx-3 border-l-2 border-cyan-400">
 										<Link
-											to="/vinicole"
+											to="/vinicole/automatisme"
 											onClick={closeMenus}
 											className="block px-4 py-2 hover:bg-gray-600"
 											aria-label="Caves intelligentes - Solutions de caves intelligentes"
 										>
 											<span className="block font-medium">
-												Caves intelligentes
+												Automatismes
 											</span>
 											<span className="block text-sm text-gray-400">
 												Solutions de caves intelligentes
 											</span>
 										</Link>
 										<Link
-											to="/vinicole"
+											to="/vinicole/informatique"
 											onClick={closeMenus}
 											className="block px-4 py-2 hover:bg-gray-600"
 											aria-label="Traçabilité - Solutions de traçabilité"
 										>
-											<span className="block font-medium">Traçabilité</span>
+											<span className="block font-medium">Informatique</span>
 											<span className="block text-sm text-gray-400">
-												Solutions de traçabilité
+												Logiciels vinicoles
 											</span>
 										</Link>
 										<Link
-											to="/vinicole"
+											to="/vinicole/electronique"
 											onClick={closeMenus}
 											className="block px-4 py-2 hover:bg-gray-600"
 											aria-label="Analyse qualité - Solutions d'analyse qualité"
 										>
-											<span className="block font-medium">Analyse qualité</span>
+											<span className="block font-medium">Electronique</span>
 											<span className="block text-sm text-gray-400">
-												Solutions d'analyse qualité
+												Solutions électroniques
+											</span>
+										</Link>
+										<Link
+											to="/vinicole/appareils"
+											onClick={closeMenus}
+											className="block px-4 py-2 hover:bg-gray-600"
+											aria-label="Analyse qualité - Solutions d'analyse qualité"
+										>
+											<span className="block font-medium">Appareils</span>
+											<span className="block text-sm text-gray-400">
+												Solutions blabla
 											</span>
 										</Link>
 									</div>
@@ -187,25 +209,32 @@ function Menu() {
 								{openDropdown === "industries" && (
 									<div className="space-y-2 pl-4 border-l-2 border-cyan-400 ml-2">
 										<Link
-											to="/industries"
+											to="/industries/automatisme"
 											onClick={closeMenus}
 											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
 										>
 											Automatisation
 										</Link>
 										<Link
-											to="/industries"
+											to="/industries/informatique"
 											onClick={closeMenus}
 											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
 										>
 											Électronique
 										</Link>
 										<Link
-											to="/industries"
+											to="/industries/machines"
 											onClick={closeMenus}
 											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
 										>
-											Logiciels
+											Machines spéciales
+										</Link>
+										<Link
+											to="/industries/autoclaves"
+											onClick={closeMenus}
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+										>
+											Autoclaves
 										</Link>
 									</div>
 								)}
@@ -224,25 +253,32 @@ function Menu() {
 								{openDropdown === "vinicole" && (
 									<div className="space-y-2 pl-4 border-l-2 border-cyan-400 ml-2">
 										<Link
-											to="/vinicole"
+											to="/vinicole/automatisme"
 											onClick={closeMenus}
 											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
 										>
-											Caves intelligentes
+											Automatisme
 										</Link>
 										<Link
-											to="/vinicole"
+											to="/vinicole/informatique"
 											onClick={closeMenus}
 											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
 										>
-											Traçabilité
+											Informatique
 										</Link>
 										<Link
-											to="/vinicole"
+											to="/vinicole/electronique"
 											onClick={closeMenus}
 											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
 										>
-											Analyse qualité
+											Electronique
+										</Link>
+										<Link
+											to="/vinicole/appareils"
+											onClick={closeMenus}
+											className="block py-1 hover:bg-gray-700 rounded-lg hover:text-cyan-400"
+										>
+											Appareils
 										</Link>
 									</div>
 								)}
