@@ -1,8 +1,7 @@
 import { MenuIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-type MenuType = "industries" | "vinicole" | null;
+import type { MenuType } from "../types";
 
 function Menu() {
 	const [openDropdown, setOpenDropdown] = useState<MenuType>(null);
@@ -19,10 +18,8 @@ function Menu() {
 
 	return (
 		<header className="border-b-2 border-b-cyan-200 bg-gray-800 relative text-gray-100">
-			{/* Container principal avec padding responsive */}
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between py-4">
-					{/* Logo et slogan */}
 					<div className="py-2">
 						<Link to="/" onClick={closeMenus} className="hover:text-cyan-400">
 							<h1 className="text-xl font-bold">Microset</h1>
@@ -32,7 +29,7 @@ function Menu() {
 						</Link>
 					</div>
 
-					{/* Menu hamburger mobile */}
+					{/* Mobile menu bar */}
 					<button
 						type="button"
 						onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -153,7 +150,7 @@ function Menu() {
 							)}
 						</div>
 
-						{/* Liens simples */}
+						{/* Simple links */}
 						<Link
 							to="/partenaires"
 							onClick={closeMenus}
@@ -187,7 +184,6 @@ function Menu() {
 									Industries ▼
 								</button>
 
-								{/* Sous-menu industries qui reste groupé avec son titre */}
 								{openDropdown === "industries" && (
 									<div className="space-y-2 pl-4 border-l-2 border-cyan-400 ml-2">
 										<Link
@@ -225,7 +221,6 @@ function Menu() {
 									Vinicole ▼
 								</button>
 
-								{/* Sous-menu vinicole qui reste groupé avec son titre */}
 								{openDropdown === "vinicole" && (
 									<div className="space-y-2 pl-4 border-l-2 border-cyan-400 ml-2">
 										<Link
@@ -252,7 +247,7 @@ function Menu() {
 									</div>
 								)}
 
-								{/* Liens simples mobile */}
+								{/* Simple Link mobile */}
 								<Link
 									to="/partenaires"
 									onClick={closeMenus}
