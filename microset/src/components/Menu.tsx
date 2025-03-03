@@ -17,7 +17,7 @@ function Menu() {
 	};
 
 	return (
-		<header className="border-b-2 border-b-cyan-200 bg-gray-800 relative text-gray-100">
+		<header className="border-b-2 border-b-cyan-200 bg-zinc-950 relative text-gray-100">
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between py-4">
 					<div className="py-2">

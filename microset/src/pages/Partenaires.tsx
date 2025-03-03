@@ -1,3 +1,5 @@
+import MainCard from "../components/MainCard";
+
 export default function Partenaires() {
-	return <h2 className="text-center text-xl">Nos partenaires</h2>;
+	return <MainCard title={"Nos partenaires"} subtitle={""} content={"Une association de PME permettant la réalisation de travaux clé en main dans toutes les activités industrielles et vinicoles."} />;
 }

@@ -2,11 +2,11 @@
 
 @layer components {
 	.main-container {
-		@apply flex flex-col gap-2 p-4 max-w-[100%] w-full border bg-cyan-950 border-cyan-200 rounded-md shadow-md;
+		@apply flex flex-col gap-2 p-4 max-w-[100%] w-full border bg-zinc-900 border-cyan-200 rounded-md shadow-md;
 	}
 
 	.second-container {
-		@apply flex flex-col gap-2 p-6 border w-full border-amber-500 bg-gray-800 rounded-lg shadow-md;
+		@apply flex flex-col gap-2 p-6 border w-full border-amber-500 bg-zinc-900 rounded-lg shadow-md;
 	}
 
 	.main-title {
