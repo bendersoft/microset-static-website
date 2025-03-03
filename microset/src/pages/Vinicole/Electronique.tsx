@@ -40,7 +40,7 @@ const Electronique = () => {
         />
         <MainPage cards={cards} />
       </div>
-      <div className="w-fit">
+      <div className="sm:w-fit">
         <HighlightCard {...references} />
       </div>
     </div>

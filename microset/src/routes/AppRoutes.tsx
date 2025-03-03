@@ -15,21 +15,19 @@ import Appareils from "../pages/Vinicole/Appareils";
 
 const IndustriesLayout = () => (
 	<div>
-		<h1 className="text-3xl font-bold mb-4">Industries</h1>
 		<Outlet />
 	</div>
 );
 
 const VinicoleLayout = () => (
 	<div>
-		<h1 className="text-3xl font-bold mb-4">Vinicole</h1>
 		<Outlet />
 	</div>
 );
 
 const AppRoutes = () => {
 	return (
-		<main className="flex flex-1 flex-col gap-4 text-gray-100 sm:gap-8 py-4 sm:py-8 px-4 sm:px-16 max-w-7xl mx-auto">
+		<main className="flex flex-1 flex-col gap-4 text-gray-100 sm:gap-8 py-4 sm:py-8 px-2 sm:px-16 max-w-7xl mx-auto">
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/industries" element={<IndustriesLayout />}>
