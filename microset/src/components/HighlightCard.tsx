@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from "uuid";
+
 type HighlightCardProps = {
   title: string;
-  categories: { id: number; title: string; items: string[] }[];
+  categories: { title: string; items: string[] }[];
 };
 
 const HighlightCard: React.FC<HighlightCardProps> = ({ title, categories }) => {
@@ -13,7 +15,7 @@ const HighlightCard: React.FC<HighlightCardProps> = ({ title, categories }) => {
             <h3 className="font-semibold text-white">{category.title}</h3>
             <ul className="list-disc list-inside text-gray-300">
               {category.items.map((item) => (
-                <li key={category.id}>{item}</li>
+                <li key={uuidv4()}>{item}</li>
               ))}
             </ul>
           </div>

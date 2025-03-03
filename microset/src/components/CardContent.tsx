@@ -1,7 +1,7 @@
 import type { CardContentType } from "../types";
+import { v4 as uuidv4 } from "uuid";
 
 const CardContent: React.FC<CardContentType> = ({
-	id,
 	title,
 	subtitle,
 	content,
@@ -13,7 +13,7 @@ const CardContent: React.FC<CardContentType> = ({
 			{Array.isArray(content) ? (
 				<ul className="list-disc list-inside">
 					{content.map((item) => (
-						<li key={id}>{item}</li>
+						<li key={uuidv4()}>{item}</li>
 					))}
 				</ul>
 			) : (
