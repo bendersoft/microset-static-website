@@ -7,8 +7,8 @@ const CardContent: React.FC<CardContentType> = ({
 	content,
 }) => {
 	return (
-		<div className="main-container shadow-md w-full md:w-1/2">
-			<h2 className="text-2xl font-semibold text-cyan-300 mb-3">{title}</h2>
+		<div className="main-container">
+			<h2 className="main-card-title">{title}</h2>
 			<h3 className="text-gray-300 font-semibold mb-3">{subtitle}</h3>
 			{Array.isArray(content) ? (
 				<ul className="list-disc list-inside">
