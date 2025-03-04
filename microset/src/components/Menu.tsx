@@ -46,6 +46,14 @@ function Menu() {
 					{/* Navigation desktop */}
 					<nav className="hidden lg:flex gap-10 relative text-lg items-center">
 						<div className="lg:flex gap-10">
+						<Link
+								to="/"
+								onClick={closeMenus}
+								className="hover:text-cyan-200"
+								aria-label="Page partenaires"
+							>
+								Accueil
+							</Link>
 							{/* Industries */}
 							<div className="relative">
 								<button
@@ -201,8 +209,15 @@ function Menu() {
 
 					{/* Menu mobile */}
 					{mobileMenuOpen && (
-						<div className="absolute top-full left-0 w-full bg-gray-800 shadow-lg mt-2">
-							<div className="container mx-auto px-4 py-4 space-y-2">
+						<div className="absolute top-full left-0 w-full bg-gray-800 shadow-lg">
+							<div className="container mx-auto px-8 py-4 space-y-2">
+							<Link
+									to="/"
+									onClick={closeMenus}
+									className="block py-2 hover:text-cyan-200"
+								>
+									Accueil
+								</Link>
 								{/* Industries mobile */}
 								<button
 									type="button"
@@ -302,7 +317,7 @@ function Menu() {
 								<Link
 									to="/contact"
 									onClick={closeMenus}
-									className="block py-2 hover:text-cyan-200"
+									className="block py-2 w-fit text-fuchsia-400 font-semibold text-lg"
 								>
 									Contact
 								</Link>
