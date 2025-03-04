@@ -27,7 +27,7 @@ const VinicoleLayout = () => (
 
 const AppRoutes = () => {
 	return (
-		<main className="flex flex-1 flex-col gap-4 text-gray-100 sm:gap-8 py-4 sm:py-8 px-2 sm:px-16 max-w-7xl mx-auto">
+		<main className="flex flex-1 flex-col gap-4 text-gray-100 sm:gap-8">
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/industries" element={<IndustriesLayout />}>
