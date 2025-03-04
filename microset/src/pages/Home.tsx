@@ -1,4 +1,7 @@
 import bgImage from "../assets/automatisation.jpg";
+import service1 from "../assets/cuve.jpg";
+import service2 from "../assets/Cuves.jpg";
+import service3 from "../assets/automatisation.jpg";
 
 export default function Home() {
 	return (
@@ -31,41 +34,53 @@ export default function Home() {
 			</section>
 
 			{/* Services Section */}
-			<section className="py-16 bg-white text-gray-900 text-center">
-				<h2 className="text-3xl font-bold text-cyan-600">Nos Services</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+			<section className="flex flex-col gap-16 py-32 bg-white text-gray-900 text-center">
+				<h2 className="text-5xl font-bold text-indigo-600">Nos services</h2>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container-max-width">
 					{services.map((service) => (
 						<div
 							key={service.title}
-							className="p-6 bg-gray-100 rounded-2xl shadow-lg"
+							
 						>
 							<img
 								src={service.image}
 								alt={service.title}
-								className="w-full h-40 object-cover rounded-lg mb-4"
+								className="w-full h-72 object-cover rounded-lg"
 							/>
-							<h3 className="text-xl font-semibold text-cyan-600">
+							<div className="flex flex-col gap-2 px-4 py-8">
+							<h3 className="text-2xl font-semibold">
 								{service.title}
 							</h3>
 							<p className="text-gray-600 mt-2">{service.description}</p>
+
+							</div>
+							<a
+							href={service.link}
+							className="w-fit bg-indigo-500 text-white px-10 py-3 rounded-full font-semibold text-lg"
+						>
+							Voir ce service
+						</a>
+							
 						</div>
 					))}
 				</div>
 			</section>
 
 			{/* CTA Section */}
-			<section className="py-16 bg-black text-white text-center">
-				<h2 className="text-3xl font-bold">Contactez-nous</h2>
-				<p className="text-gray-300 mt-2">
+			<section className="flex flex-col gap-16 py-32 bg-black text-white items-center">
+				<div className="flex flex-col gap-4 text-center">
+				<h2 className="text-7xl font-bold">Travailler ensemble</h2>
+				<p className="text-lgl text-gray-300">
 					Discutons de vos besoins en automatisation et surveillance
 					industrielle.
 				</p>
+				</div>
 				<a
-					href="/contact"
-					className="mt-6 inline-block bg-cyan-600 text-white px-6 py-3 rounded-full font-semibold text-lg"
-				>
-					Nous Contacter
-				</a>
+							href="/contact"
+							className="w-fit bg-linear-to-t from-fuchsia-500 to-indigo-500 text-white px-10 py-3 rounded-full font-semibold text-lg"
+						>
+							Nous contacter
+						</a>
 			</section>
 		</main>
 	);
@@ -76,18 +91,21 @@ const services = [
 		title: "Automatisme industriel",
 		description:
 			"Solutions avancées pour la gestion et l'automatisation des processus industriels.",
-		image: "/images/automatisme.jpg",
+		image: service1,
+		link: "/industries/informatique"
 	},
 	{
 		title: "Informatique industrielle",
 		description:
 			"Développement de logiciels et systèmes pour le contrôle des opérations industrielles.",
-		image: "/images/informatique.jpg",
+		image: service2,
+		link: "/vinicole/automatisme"
 	},
 	{
 		title: "Maintenance et supervision",
 		description:
 			"Services de maintenance et de surveillance pour garantir la continuité des opérations.",
-		image: "/images/maintenance.jpg",
+		image: service3,
+		link: "/industries/automatisme"
 	},
 ];
