@@ -20,7 +20,7 @@ function Menu() {
 	return (
 		<header className="border-b-1 border-b-purple-500 bg-zinc-950 text-gray-100 font-semibold z-50 sticky top-0">
 			<div className="mx-auto px-4 sm:px-6 lg:px-12">
-				<div className="flex gap-20 items-center justify-between lg:justify-items-start py-4">
+				<div className="flex gap-20 items-center justify-between lg:justify-items-start lg:py-4">
 					<div className="py-2">
 						<Link to="/" onClick={closeMenus} className="hover:text-cyan-200">
 							<div className="flex gap-2 items-center">

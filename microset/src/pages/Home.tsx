@@ -13,19 +13,19 @@ export default function Home() {
 			>
 				{" "}
 				<div className="bg-zinc-900/60 w-full h-full">
-					<div className="flex flex-col gap-8 text-left px-16 py-24 max-w-3/5 text-balance">
-						<h1 className="text-7xl">
+					<div className="flex flex-col gap-8 text-left px-16 py-24 lg:max-w-3/5 text-balance">
+						<h1 className="text-xl lg:text-7xl">
 							20 ans d'expérience du service en surveillances et pilotages
 							industriels
 						</h1>
-						<p className="text-lg">
+						<p className="lg:text-lg">
 							Nous vous accompagnons dans le secteur industriel et vinivole pour
 							tout vos projet il faut une deuxième ligne et je n'ai pas d'idée
 							mais comme ça on voit.
 						</p>
 						<a
 							href="/contact"
-							className="w-fit inline-block bg-linear-to-t from-fuchsia-500 to-indigo-500 text-white px-10 py-3 rounded-full font-semibold text-lg"
+							className="w-fit inline-block bg-linear-to-t from-fuchsia-500 to-indigo-500 text-white px-4 lg:px-10 py-3 rounded-full font-semibold lg:text-lg"
 						>
 							Nous contacter
 						</a>
@@ -34,9 +34,9 @@ export default function Home() {
 			</section>
 
 			{/* Services Section */}
-			<section className="flex flex-col gap-16 py-32 bg-white text-gray-900 text-center">
-				<h2 className="text-5xl font-bold text-indigo-600">Nos services</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container-max-width">
+			<section className="flex flex-col gap-16 py-12 lg:py-32 bg-white text-gray-900 text-center">
+				<h2 className="text-3xl lg:text-5xl font-bold text-indigo-600">Nos services</h2>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-8 container-max-width">
 					{services.map((service) => (
 						<div
 							key={service.title}
@@ -45,7 +45,7 @@ export default function Home() {
 							<img
 								src={service.image}
 								alt={service.title}
-								className="w-full h-72 object-cover rounded-lg"
+								className="w-full h-72 object-cover lg:rounded-lg"
 							/>
 							<div className="flex flex-col gap-2 px-4 py-8">
 							<h3 className="text-2xl font-semibold">
@@ -56,7 +56,7 @@ export default function Home() {
 							</div>
 							<a
 							href={service.link}
-							className="w-fit bg-indigo-500 text-white px-10 py-3 rounded-full font-semibold text-lg"
+							className="w-fit bg-indigo-500 text-white px-4 lg:px-10 py-3 rounded-full font-semibold lg:text-lg"
 						>
 							Voir ce service
 						</a>
@@ -67,17 +67,17 @@ export default function Home() {
 			</section>
 
 			{/* CTA Section */}
-			<section className="flex flex-col gap-16 py-32 bg-black text-white items-center">
+			<section className="flex flex-col gap-8 lg:gap-16 py-20 lg:py-32 bg-black text-white items-center">
 				<div className="flex flex-col gap-4 text-center">
-				<h2 className="text-7xl font-bold">Travailler ensemble</h2>
-				<p className="text-lgl text-gray-300">
+				<h2 className="text-3xl lg:text-7xl font-bold">Travailler ensemble</h2>
+				<p className="lg:text-lg text-gray-300">
 					Discutons de vos besoins en automatisation et surveillance
 					industrielle.
 				</p>
 				</div>
 				<a
 							href="/contact"
-							className="w-fit bg-linear-to-t from-fuchsia-500 to-indigo-500 text-white px-10 py-3 rounded-full font-semibold text-lg"
+							className="w-fit bg-linear-to-t from-fuchsia-500 to-indigo-500 text-white px-4 lg:px-10 py-3 rounded-full font-semibold lg:text-lg"
 						>
 							Nous contacter
 						</a>
