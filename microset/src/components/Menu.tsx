@@ -18,14 +18,14 @@ function Menu() {
 	};
 
 	return (
-		<header className="border-b-1 border-b-purple-500 bg-zinc-950 relative text-gray-100 font-semibold z-50">
+		<header className="border-b-1 border-b-purple-500 bg-zinc-950 text-gray-100 font-semibold z-50 sticky top-0">
 			<div className="mx-auto px-4 sm:px-6 lg:px-12">
-				<div className="flex gap-20 items-center justify-items-start py-4">
+				<div className="flex gap-20 items-center justify-between lg:justify-items-start py-4">
 					<div className="py-2">
 						<Link to="/" onClick={closeMenus} className="hover:text-cyan-200">
 							<div className="flex gap-2 items-center">
 								<img src={logo} alt="logo microset" />
-								<h1 className="text-3xl">Microset</h1>
+								<h1 className="hidden lg:flex text-3xl">Microset</h1>
 							</div>
 						</Link>
 					</div>
@@ -34,7 +34,7 @@ function Menu() {
 					<button
 						type="button"
 						onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-						className="lg:hidden relative"
+						className="lg:hidden relative p-4"
 					>
 						{mobileMenuOpen ? (
 							<XIcon className="h-6 w-6 text-white hover:text-cyan-200 transition-colors" />
@@ -44,7 +44,7 @@ function Menu() {
 					</button>
 
 					{/* Navigation desktop */}
-					<nav className="hidden lg:flex gap-10 relative text-lg items-center">
+					<nav className="hidden lg:flex gap-10 relative text-lg items-center px-10">
 						<div className="lg:flex gap-10">
 						<Link
 								to="/"
