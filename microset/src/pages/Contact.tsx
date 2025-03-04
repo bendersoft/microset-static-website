@@ -12,7 +12,9 @@ const Contact = () => {
 		message: "",
 	});
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+	) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
@@ -23,11 +25,15 @@ const Contact = () => {
 
 	return (
 		<div className="max-w-7xl mx-auto p-6 bg-zinc-950 shadow-md rounded-lg">
-			<h2 className="text-2xl font-semibold text-gray-200 mb-4">Contactez-nous</h2>
+			<h2 className="text-2xl font-semibold text-gray-200 mb-4">
+				Contactez-nous
+			</h2>
 			<form onSubmit={handleSubmit} className="space-y-4">
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 					<div>
-						<label htmlFor="company" className="block">Société</label>
+						<label htmlFor="company" className="block">
+							Société
+						</label>
 						<input
 							type="text"
 							id="company"
@@ -40,7 +46,9 @@ const Contact = () => {
 					</div>
 
 					<div>
-						<label htmlFor="person" className="block">Personne à contacter</label>
+						<label htmlFor="person" className="block">
+							Personne à contacter
+						</label>
 						<input
 							type="text"
 							id="person"
@@ -54,7 +62,9 @@ const Contact = () => {
 				</div>
 
 				<div>
-					<label htmlFor="address" className="block">Adresse</label>
+					<label htmlFor="address" className="block">
+						Adresse
+					</label>
 					<input
 						type="text"
 						id="address"
@@ -68,7 +78,9 @@ const Contact = () => {
 
 				<div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 					<div>
-						<label htmlFor="postal-code" className="block">Code postal</label>
+						<label htmlFor="postal-code" className="block">
+							Code postal
+						</label>
 						<input
 							type="text"
 							id="postal-code"
@@ -81,7 +93,9 @@ const Contact = () => {
 					</div>
 
 					<div>
-						<label htmlFor="city" className="block">Ville</label>
+						<label htmlFor="city" className="block">
+							Ville
+						</label>
 						<input
 							type="text"
 							id="city"
@@ -94,7 +108,9 @@ const Contact = () => {
 					</div>
 
 					<div>
-						<label htmlFor="phone" className="block">Téléphone</label>
+						<label htmlFor="phone" className="block">
+							Téléphone
+						</label>
 						<input
 							type="tel"
 							id="phone"
@@ -108,7 +124,9 @@ const Contact = () => {
 				</div>
 
 				<div>
-					<label htmlFor="email" className="block">E-mail</label>
+					<label htmlFor="email" className="block">
+						E-mail
+					</label>
 					<input
 						type="email"
 						id="email"
@@ -121,7 +139,9 @@ const Contact = () => {
 				</div>
 
 				<div>
-					<label htmlFor="message" className="block">Message</label>
+					<label htmlFor="message" className="block">
+						Message
+					</label>
 					<textarea
 						name="message"
 						id="message"
