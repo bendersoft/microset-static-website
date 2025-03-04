@@ -28,4 +28,8 @@
 	.normal-text {
 		@apply text-gray-100;
 	}
+
+	.container-max-width {
+		@apply max-w-7xl mx-auto;
+	}
 }

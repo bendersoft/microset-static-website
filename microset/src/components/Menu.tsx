@@ -2,6 +2,7 @@ import { MenuIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import type { MenuType } from "../types";
+import logo from "../assets/icons8-mu-64.png"
 
 function Menu() {
 	const [openDropdown, setOpenDropdown] = useState<MenuType>(null);
@@ -17,15 +18,15 @@ function Menu() {
 	};
 
 	return (
-		<header className="border-b-1 border-b-cyan-200 bg-zinc-950 relative text-gray-100 font-bold">
-			<div className="max-w-6xl container mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex items-center justify-between py-4">
+		<header className="border-b-1 border-b-purple-500 bg-zinc-950 relative text-gray-100 font-semibold z-50">
+			<div className="mx-auto px-4 sm:px-6 lg:px-12">
+				<div className="flex gap-16 items-center justify-items-start py-4">
 					<div className="py-2">
 						<Link to="/" onClick={closeMenus} className="hover:text-cyan-200">
-							<h1 className="text-xl font-bold">Microset</h1>
-							<p className="text-sm text-gray-400">
-								Surveillances et pilotages industriels
-							</p>
+						<div className="flex gap-2 items-center">
+						<img src={logo} alt="logo microset" />
+						<h1 className="text-3xl">Microset</h1>
+						</div>	
 						</Link>
 					</div>
 
@@ -43,7 +44,7 @@ function Menu() {
 					</button>
 
 					{/* Navigation desktop */}
-					<nav className="hidden lg:flex gap-6 relative">
+					<nav className="hidden lg:flex gap-6 relative text-lg">
 						{/* Industries */}
 						<div className="relative">
 							<button
